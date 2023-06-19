@@ -1,0 +1,14 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.makingpizza {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+.makingpizza img{
+   width: 100%;
+   height: auto;
+}
