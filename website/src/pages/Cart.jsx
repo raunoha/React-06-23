@@ -4,7 +4,7 @@ function Cart() {
 
   
   return (
-    <div>Cart</div>
+    <div>Pizza Taxi</div>
   )
 }
 

@@ -2,7 +2,7 @@ import {Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Homepage from "./pages/Homepage";
 import Cart from "./pages/Cart";
-import Contact  from "./pages/Contact";
+import Contact from "./pages/Contact";
 import About  from "./pages/About";
 import Menu from "./pages/Menu";
 import NavigationBar from './components/Navbar';
@@ -48,7 +48,7 @@ function App() {
             <Nav.Link href="/contact">Contact</Nav.Link>
            </Nav>
           <Nav>
-            <Nav.Link as={Link} to="/cart"> Cart </Nav.Link>
+            <Nav.Link as={Link} to="/cart"> Pizza Taxi </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
