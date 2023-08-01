@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Map from '../components/Map';
 
 function ContactUs2() {
   const nameRef = useRef();
   const emailRef = useRef();
   const phoneRef = useRef();
   const messageRef = useRef();
+  const [coordinaates, setCoordinates] = useState({lngLat: [59.4378, 24.7574], zoom: 13});
 
   const sendEmail = () => {
     const data = {
@@ -26,9 +28,16 @@ function ContactUs2() {
   return (
     <div>
         <div>
-            Siia tuleb asu koht ja kaart
-            ja lahti oleku aeg 
-        </div>
+          
+        <button onClick={() => setCoordinates({lngLat: [59.4378, 24.7574], zoom: 11})}>Kõik poed</button>
+        <button onClick={() => setCoordinates({lngLat: [59.4231, 24.7991], zoom: 13})}>Ülemiste</button>
+        <button onClick={() => setCoordinates({lngLat: [59.478, 24.940], zoom: 13})}>Muuga</button>
+    <Map mapCoordinaates={coordinaates}  /><br />
+            Siit leiab meie lahti oleku aja , mis ajani oleme avatud ja küsimusi küsida. <br />
+            Ülemist Kohvik on avatud 09-2100,
+            <br />
+            Muuga on avatud 0900-1600
+        </div> <br />
       <label>Name</label> <br />
       <input ref={nameRef} type="text" />  <br />
       <label>Email</label> <br />
@@ -51,4 +60,8 @@ function ContactUs2() {
   )
 }
 
-export default ContactUs2
+export default ContactUs2;
+
+
+
+
